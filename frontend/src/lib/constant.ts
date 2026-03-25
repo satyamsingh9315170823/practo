@@ -227,8 +227,7 @@ export const contactInfo = [
   ];
 
   export const trustLogos = [
-    "Business Insider", "CBS News", "CNBC", "Forbes", "Fortune", "Fox Business",
-    "Healthline", "Inc.", "Men's Health", "TechCrunch", "The New York Times", "WSJ"
+    "Business Insider", "CBS News", "CNBC", "Forbes", "Fortune", "Fox Business"
   ];
 
 
