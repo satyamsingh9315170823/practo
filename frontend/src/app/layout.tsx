@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 metadataBase: new URL(
 process.env.NEXT_PUBLIC_SITE_URL || 
 "http://localhost:3000"
-)
+),
   title: {
     default: "MediCare+ | Online Doctor Consultation Platform",
     template: "%s | MediCare+"
@@ -74,18 +74,18 @@ icons:{
     description:
     "Smart healthcare platform for booking doctors and managing your health.",
 
-    url:"/https://practo-sable.vercel.app",
+    url:"https://practo-sable.vercel.app",
 
     siteName:"MediCare+",
 
-    images:[
-      {
-        url:"/og-image.png",
-        width:1200,
-        height:630,
-        alt:"MediCare+"
-      }
-    ],
+ images:[
+{
+url:"https://practo-sable.vercel.app/og-image.png",
+width:1200,
+height:630,
+alt:"MediCare+"
+}
+],
 
     locale:"en_US",
 
