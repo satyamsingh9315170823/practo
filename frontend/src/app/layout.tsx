@@ -14,8 +14,10 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
 
-  metadataBase: new URL("http://localhost:3000"),
-
+metadataBase: new URL(
+process.env.NEXT_PUBLIC_SITE_URL || 
+"http://localhost:3000"
+)
   title: {
     default: "MediCare+ | Online Doctor Consultation Platform",
     template: "%s | MediCare+"
@@ -59,11 +61,10 @@ export const metadata: Metadata = {
     canonical:"/"
   },
 
-  icons:{
-    icon:"/favicon.ico",
-    shortcut:"/favicon.ico",
-    apple:"/apple-icon.png"
-  },
+icons:{
+  icon:"/favicon.ico",
+  apple:"/favicon.ico"
+},
 
   manifest:"/site.webmanifest",
 
@@ -73,7 +74,7 @@ export const metadata: Metadata = {
     description:
     "Smart healthcare platform for booking doctors and managing your health.",
 
-    url:"/",
+    url:"/https://practo-sable.vercel.app",
 
     siteName:"MediCare+",
 
