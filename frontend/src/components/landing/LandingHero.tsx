@@ -2,9 +2,25 @@ import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { healthcareCategories } from "@/lib/constant";
+import { useRouter } from "next/navigation";
 
 const LandingHero = () => {
-  const handleCategoryClick = (categoryTitle: string) => {};
+  const isAuthenticated=false;
+  const router= useRouter();
+  const handleBookConsultation=()=>{
+    if(isAuthenticated){
+      router.push('doctor-list')
+    }else{
+      router.push('/signup/patient')
+    }
+  }
+  const handleCategoryClick = (categoryTitle: string) => {
+if(isAuthenticated){
+  router.push(`doctor-list?category=${categoryTitle}`)
+}else{
+  router.push('/signup/patient')
+}
+  };
 
   return (
     <section className="relative py-16 sm:py-20 lg:py-20 px-5 sm:px-8 bg-gradient-to-b from-blue-50 via-white to-white overflow-hidden">
@@ -51,7 +67,7 @@ lg:mx-0"
           {/* BUTTONS */}
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start mb-12">
-            <Button
+            <Button onClick={handleBookConsultation}
               size="lg"
               className="h-[52px] sm:h-[56px] lg:h-[60px]
 
